@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To do List</title>
 </head>
 <body>
-    
+    <div id="content">
+        <h1>To-do List</h1>
+        <div id="projects">
+            <h2>Projects</h2>
+            <div id="project-list"></div>
+            <button id="add-project">Add project</button>
+        </div>
+        <div id="tasks">
+            <h2>Tasks</h2>
+            <div id="task-list"></div>
+            <button id="add-task">Add task</button>
+        </div>
+    </div>
+    <div id="forms">
+        <form id="project-form" method="post">
+            <label>
+                Name: <input id="project-name" type="text">
+            </label>
+            <input type="submit" value="Submit" id="submit-project-form">
+        </form>
+        <form id="task-form" method="post">
+            <label>
+                Task: <input id="task-name" type="text">
+            </label>
+            <label>
+                Description: <input id="description" type="text">
+            </label>
+            <label>
+                Due date: <input id="due-date" type="date">
+            </label>
+            <label>
+                Priority: 
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </label>
+            <input type="submit" value="Submit" id="submit-task-form">
+        </form>
+    </div>
 </body>
 </html>

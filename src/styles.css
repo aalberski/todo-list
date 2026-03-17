@@ -1,3 +1,71 @@
-*{
+body{
     margin: 0;
+    background: #f5f6f8;
+    color: #333;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "header header" "projects tasks";
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+#content > h1{
+    grid-area: header;
+    margin: 0;
+}
+
+#projects, #tasks{
+    background: #fff;   
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 1rem;
+}
+
+#projects{
+    grid-area: projects;
+}
+
+#tasks{
+    grid-area: tasks;
+}
+
+#project-list{
+    display: grid;
+}
+
+#task-list{
+
+}
+
+.project-item{
+    cursor: pointer;
+    padding: 0.5rem;
+    display: block;
+}
+
+.project-item.active{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.task-item{
+
+}
+
+#project-form, #task-form{
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    display: grid;
+    padding: 20px;
 }
